@@ -1,0 +1,90 @@
+﻿/*----------------------------/responsive/------------------------------------*/
+@media (max-width: 425px) {
+    span{
+        font-size:2vw;
+    }
+    .headBan {
+        grid-row: 14 / span 33;
+    }
+
+    .imgReg {
+        display: none;
+    }
+
+    .TraMen {
+        height: 170vh;
+    }
+
+    .ButPag {
+        height: 2.5vh;
+        font-size: 2vw;
+    }
+
+    .gridPri {
+        grid-template-rows: repeat(55,3vh);
+    }
+    /*.imgPro {
+        width: 43vh;
+        height: 28vh;
+    }*/
+    .iconCar {
+        width: 8vw;
+        height: 5vh;
+    }
+    .carComp {
+        right: 10vw;
+        top: 42vh; 
+    }
+    .barNavInt {
+        height: 3vh;
+
+    }
+    /*.iconFot {
+        width: 10vh;
+        height: 10vh;
+    }*/
+    .gridCont span{
+        font-size:4vw;
+    }
+    .gridCont {
+
+        grid-template-rows: repeat(16,5.8vh);
+        padding: 3vh;
+    }
+    .gridContPro {
+        grid-template-rows: repeat(13,3vh);
+        padding: 3vh
+    }
+    /*.imgReg {
+        height: 80vh;
+        width: 40.4vw;
+    }*/
+    /*.cajTxt {
+        width: 33vh;
+        height: 3vh;
+    }*/
+    .foot {
+        grid-row: 47 / span 9;
+    }
+    .gridFoot {
+        grid-template-rows: repeat(9,3vh);
+    }
+    .TraMen {
+        height: 120vh;
+    }
+    .ButCer {
+        height: 4vh;
+        font-size: 2.2vw;
+    }
+    .formCent {
+        grid-column: 2 /span 5;
+    }
+    .FormActUsu {
+        grid-column: 2 /span 5;
+
+    }
+    .FormActUsuBut {
+        grid-column: 2 /span 5;
+
+    }
+}

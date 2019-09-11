@@ -1,0 +1,34 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DatUsuActPass.aspx.cs" Inherits="DatUsuActPass" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="FormActCue FleJus">
+        <div>
+            <br />
+            <asp:Label ID="Label3" runat="server" Text="Digite la Contraseña actual"></asp:Label>
+            <br />
+            <asp:TextBox ID="ContraseñaA" runat="server" CssClass="cajTxt"></asp:TextBox>
+            <br />
+            <asp:Label ID="Label4" runat="server" Text="Confirme la contraseña actual"></asp:Label>
+            <br />
+            <asp:TextBox ID="ConfirmarA" runat="server" CssClass="cajTxt"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label5" runat="server" Text="Digite la nueva Contraseña"></asp:Label>
+            <br />
+            <asp:TextBox ID="ContraseñaN" runat="server" CssClass="cajTxt"></asp:TextBox>
+            <br />
+            <asp:Label ID="Label6" runat="server" Text="Confirme la nueva contraseña"></asp:Label>
+            <br />
+            <asp:TextBox ID="ConfirmarN" runat="server" CssClass="cajTxt"></asp:TextBox>
+            <br />
+
+            <asp:Button ID="Button1" runat="server" Text="Aceptar" BorderStyle="None" CssClass="ButPag ButPagIni" OnClick="Button1_Click" />
+        </div>
+    </div>
+    <div class="contImglog">
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/img/Group 7.png" CssClass="imgReg" />
+    </div>
+</asp:Content>
+

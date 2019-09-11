@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ProCamp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+ <%--   <!-- Materialize Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Materialize Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    --%>
+    <script src="js/validaciones.js"></script>
+    <link rel="stylesheet" href="Css/masterTot.css" />
+    <link rel="stylesheet" href="Css/Responsive.css" />
+    <script src="js/JavaScript.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="gridPri">
+        <div class="TraMen" id="Transparencia" runat="server" onclick="Transpa">
+            <asp:Button ID="CerrarTrans" runat="server" Text="X" CssClass="ButPag ButCer" OnClick="CerrarTrans_Click" />
+        </div>
+        <%-- ======================barra navegacion=================================--%>
+        <div runat="server" class="barNav">
+            <div class="barNavInt">
+                <asp:Button ID="Button3" runat="server" Text="Inicio" OnClick="Button3_Click" CssClass="ButPag" BorderStyle="None" />
+                <asp:Button ID="Button4" runat="server" Text="Tienda" OnClick="Button4_Click" CssClass="ButPag" BorderStyle="None" />
+                <asp:Button ID="Button5" runat="server" Text="Registrese" OnClick="Button5_Click" CssClass="ButPag" BorderStyle="None" />
+                <asp:Button ID="IniciarSecion" runat="server" Text="Iniciar Sesion" OnClick="Button1_Click" CssClass="ButPag" BorderStyle="None" />
+                <asp:Button ID="Button9" runat="server" Text="Mi Cuenta" Visible="False" OnClick="Button9_Click" CssClass="ButPag" BorderStyle="None" />
+                <div>
+                <asp:Label ID="LabelCont" runat="server" Visible="True"></asp:Label>
+                <asp:Button ID="Button2" runat="server" Text="Cerrar Sesion" CssClass="ButPag" OnClick="Button2_Click" Visible="False" BorderStyle="None" />
+
+                </div>
+
+            </div>
+            <div class="divimglogo" runat="server">
+             <asp:Image ID="Image1" runat="server" CssClass="imglogo" ImageUrl="~/img/procamp.png" />
+
+            </div>
+        </div>
+        <%-- ======================Fin barra navegacion=================================--%>
+        <%-- =====================Carrito de compra=================================--%>
+        <div class="carComp">
+            <div class="block">
+                <div class="gridCar">
+                    <asp:Label ID="LabelCar" runat="server" ForeColor="#CC0000" Visible="False" CssClass="CarCont"></asp:Label>
+
+                    <asp:ImageButton ID="ImageButton7" runat="server" BorderStyle="None" CssClass="iconCar" ImageUrl="~/img/Carrito.png" OnClick="ImageButton7_Click" Visible="False" />
+                </div>
+            </div>
+
+        </div>
+        <%-- =====================Fin carrito de compra=================================--%>
+        <%-- =====================logo =================================
+        <div class="ribbon">
+            <asp:Image ID="Image1" runat="server"  ImageUrl="~/img/procamp.png" CssClass="imLog"/>
+        </div>
+        --%>
+        <%-- =====================Fin logo =================================--%>
+
+
+        <%-- ======================navegacion contenido=================================--%>
+        <div class="aside" id="PagCont">
+
+            <asp:Button ID="ButtonFru" runat="server" Text="Frutas" CssClass="ButPag ButPagIni" OnClick="ButtonFru_Click" Visible="False" />
+            <asp:Button ID="ButtonVer" runat="server" Text="Verduras" CssClass="ButPag ButPagIni" OnClick="ButtonVer_Click" Visible="False" />
+            <asp:Button ID="ButtonPro" runat="server" Text="Proceso" CssClass="ButPag ButPagIni" OnClick="ButtonPro_Click" Visible="False" />
+
+        </div>
+        <%-- ======================Fin aside=================================--%>
+        <%-- =============================================================================================================================================================================--%>
+        <%-- ======================contenido pagina=================================--%>
+        <div class="headBan">
+            <div class="block">
+                <div class="gridCont">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <%-- ======================Fin contenido pagina=================================--%>
+
+        <%-- ===============================================================================================================================================================================--%>
+
+        <%-- ======================footer=================================--%>
+        <div class="foot" runat="server">
+            <div class="block">
+                <div class="gridFoot">
+                    <div class="DatCon">
+                        <asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/img/telefono.png" CssClass="iconfoot" />
+                        <asp:Label ID="Label11" runat="server" Text="Telefono: "></asp:Label>
+                        <asp:Label ID="Label13" runat="server"></asp:Label>
+                        <br />
+                        <asp:ImageButton ID="ImageButton6" runat="server" ImageUrl="~/img/ubicacion.png" CssClass="iconfoot" />
+                        <asp:Label ID="Label12" runat="server" Text="Ubicacion: "></asp:Label>
+                        <asp:Label ID="Label14" runat="server"></asp:Label>
+                    </div>
+                    <div class="menDer">
+                        <div>
+                            <asp:Label ID="Label10" runat="server" Text="Todos los Derechos Reservados"></asp:Label>
+                        </div>
+                        <div>
+                            <asp:Button ID="Button1" runat="server" Text="Ayuda" BorderStyle="None" CssClass="butfoot" Font-Overline="False" Font-Underline="True" ForeColor="#0000CC" OnClick="Button1_Click1" />
+                        </div>
+                    </div>
+                    <div class="IconRed">
+                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/img/facebook.png" OnClick="ImageButton1_Click" CssClass="iconfoot" />
+                        <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/img/instagram.png" OnClick="ImageButton2_Click" CssClass="iconfoot" />
+                        <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/img/pinteres.png" OnClick="ImageButton3_Click" CssClass="iconfoot" />
+                        <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/img/Youtube.png" OnClick="ImageButton4_Click" CssClass="iconfoot" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <%-- ======================Fin footer=================================--%>
+    </form>
+</body>
+</html>
